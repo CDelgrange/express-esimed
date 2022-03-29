@@ -70,6 +70,7 @@
 #### Tests (mise en place)
 
 - Installez dans les dépendances **DEV** les librairies `jest` & `supertest`
+- Ajoutez dans votre `package.json`, le script suivant: `"test": "jest"`. Il est a placer juste après notre autre script `"devstart": "nodemon index.js"`
 - Dans la `class WebServer`, rajoutez, après le `port = 3000;` une propriété `server = undefined;`
 - Toujours dans cette classe, dans la méthode `start()`, assignez cette nouvelle variable: `this.server = this.app.listen(.....);`
 - Enfin, rajoutez à cette classe une méthode `stop()` qui contiendra seulement: `this.server.close();`
