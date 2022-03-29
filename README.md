@@ -54,3 +54,13 @@
 - Gérez en conséquence les retours d'erreurs de façon à avoir des erreurs compréhensibles pour ceux qui utiliseront les API de votre back-end
 - Pour le `secret` permettant la génération du JWT, utilisez une **variable d'environnement** dédiée à ce besoin (cherchez donc à comprendre ce que sont les "variables d'environnement" ainsi que leurs utilités)
 - Lors de la création du JWT, rajoutez lui une durée de 1h avant expiration. Cette information doit également se retrouver dans une variable d'environnement dédiée
+
+## TP n°3
+
+### First steps
+
+- Installez la librairie `express-validator`
+- Rajoutez des règles de validation pour les routes de création d'un utilisateur et d'authentification
+- Les règles de validation pour les routes sont les suivantes:
+  - `POST /users/login` => le body de la request doit contenir les champs `firstName` et `password`
+  - `POST /users` => le body de la request doit vontenur les champs pour créer l'utilisateur, et le `password` doit avoir une taille minimum de 8 caractères
